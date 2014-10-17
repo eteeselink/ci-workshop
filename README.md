@@ -1,7 +1,7 @@
 Log Genius
 ==========
 
-Initial files for a 1-day workshop on Continuous Integration that I teach.
+Initial files for a 1-day workshop on Continuous Integration.
 
 Prepared for the [Software Technology post-master program](http://wwwooti.win.tue.nl) ("OOTI" for friends).
 
