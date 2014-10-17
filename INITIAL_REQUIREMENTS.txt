@@ -4,6 +4,7 @@
 4. Can we extrapolate past behavior into the future given the data from the previous 3 requirements?
 
 All of the above can be clearly visualized with a bar chart or a line chart. 
+
 A command-line interface is to be provided that allows the user to choose which of the above questions 
 will be answered and which log file to read from. This command-line program is to generate one or more 
 image files with the appropriate visualizations.
