@@ -1,0 +1,53 @@
+RUNNING STUFF
+=============
+Open a command-line window and navigate to the source code repository root directory. Then enter the following commands:
+
+  To get started:
+    > ENV\Scripts\activate
+
+  To run the program:
+    > python log_genius.py
+
+  To run the automated tests:
+    > python -m unittest
+
+Initially, the last command should print something like:
+
+    Ran 5 tests in 0.001s
+
+    OK
+
+If it did not, something went wrong. Ask a colleague or the teacher.
+
+
+INSTALLING PYTHON CORRECTLY
+===========================
+If everything went right, you already did this, but if you didn't:
+
+* Download Python 3.4.1 or later (x86) for Windows from https://www.python.org/download. 
+  * Get the MSI installer
+  * Make sure the options "Install PIP" and "Add Python to PATH" are ticked.
+* Open a command-line window and navigate to the source code repository root directory. Then enter the following commands:
+  > pip install virtualenv
+  > virtualenv --python=C:\YOUR\PYTHON\PATH\python34.exe ENV
+  > ENV\Scripts\activate
+  > ENV\Scripts\pip install pygal
+
+If you never used the command line before, find help from a colleague who did.
+
+What the above does, is install some dependencies into a virtual python environment. Therefore, if 
+different python code on your system has conflicting dependencies, things will still work.
+
+Now, in the same directory, create a file called `makebar.py` with the following contents:
+
+  import pygal                                                       # First import pygal
+  bar_chart = pygal.Bar()                                            # Then create a bar graph object
+  bar_chart.add('Fibonacci', [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55])  # Add some values
+  bar_chart.render_to_file('bar_chart.svg')                          # Save the svg to a file
+
+Save it, and run:
+
+ > python makebar.py
+
+You should see a bar_chart.svg file appear in the same directory. Delete makebar.py again.
+
